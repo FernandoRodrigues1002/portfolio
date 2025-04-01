@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #63783D;
+  padding: 20px;
+  gap: 2rem;
+  color: white;
+  padding-top: 80px;
+}
+
+.imageWrapper {
+  flex-shrink: 0;
+}
+
+.image {
+  width: 250px; /* Tamanho fixo para garantir proporção */
+  height: 250px; /* Deve ser igual ao width */
+  border-radius: 50%; /* Faz a imagem ficar redonda */
+  border: 3px solid grey; /* Adiciona borda */
+  object-fit: cover; /* Garante que a imagem preencha sem deformar */
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #99cd85; /* Cor dourada para destaque */
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
