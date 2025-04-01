@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #63783D;
+  background-color: #1c1c1c;
   padding: 20px;
   gap: 2rem;
   color: white;
@@ -12,6 +12,7 @@
 
 .imageWrapper {
   flex-shrink: 0;
+  
 }
 
 .image {
@@ -30,10 +31,47 @@
 .name {
   font-size: 2rem;
   font-weight: bold;
-  color: #99cd85; /* Cor dourada para destaque */
+  color: #ff9001; /* Cor dourada para destaque */
 }
 
 .description {
   font-size: 1.5rem;
   margin-top: 0.5rem;
+}
+
+.animationContainer {
+  position: absolute; /* Mantém a animação fixa na tela */
+  bottom: 20px; /* Distância do fundo */
+  right: 20px; /* Distância da direita */
+
+  pointer-events: none; /* Evita que a animação bloqueie cliques em elementos abaixo */
+}
+
+
+/* Estilo para o texto da animação */
+
+.cursor{
+    position: relative;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+/* Animation */
+.typewriter-animation {
+  animation: 
+    typewriter 5s steps(50) 1s 1 normal both, 
+    blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blinkingCursor{
+  from { border-right-color: rgba(255,255,255,.75); }
+  to { border-right-color: transparent; }
 }

@@ -1,5 +1,9 @@
+"use client";
+
 import styles from './styles/Home.module.css';
 import Image from 'next/image';
+import Lottie from "lottie-react";
+import animationData from "../../public/animations/Animation1.json";
 
 export default function Home() {
   return (
@@ -16,8 +20,14 @@ export default function Home() {
       </div>
 
       <div className={styles.textWrapper}>
-        <h1 className={styles.description}>Olá, eu sou o <span className={styles.name}>Fernando Rodrigues</span></h1>
-        <p className={styles.description}>Estudante de Sistemas para Internet no Senac</p>
+      <h1 className={`${styles.description} ${styles.cursor} ${styles['typewriter-animation']}`}>
+        Olá, eu sou o <span className={styles.name}>Fernando Rodrigues</span>
+      </h1>
+      <p className={styles.description}>Estudante de Sistemas para Internet no Senac</p>
+    </div>
+
+      <div className={styles.animationContainer}>
+        <Lottie animationData={animationData} loop={true} />
       </div>
   </section>
 );
