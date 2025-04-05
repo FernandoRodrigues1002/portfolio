@@ -104,3 +104,19 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .skillLabel {
+    font-size: 14px;
+  }
+
+  .skillPercentage {
+    font-size: 12px;
+    top: -18px;
+  }
+
+  .skill_level::after {
+    font-size: 10px;
+    top: -24px;
+  }
+}

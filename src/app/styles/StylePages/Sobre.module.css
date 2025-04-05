@@ -11,7 +11,7 @@
   }
 
   .about-content {
-    background-color: orange;
+    background-color: #ff9001;
     padding: 20px;
     width: 80%;
     max-width: 500px;
@@ -63,3 +63,27 @@
   }
 }
   
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    min-height: auto; /* Changed to min-height: auto */
+    padding: 60px 15px; /* Increased padding to account for fixed header */
+    gap: 1rem; /* Reduced gap for mobile */
+  }
+
+  .about-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    min-height: auto; /* Remove fixed height constraint on mobile */
+  }
+
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-paragraph {
+    font-size: 1rem;
+  }
+}

@@ -141,20 +141,39 @@
 /* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
   .projectGrid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Increased from 160px */
     gap: 1.5rem;
   }
   
   .card, .card2 {
-    width: 160px;
-    height: 220px;
+    width: 100%; /* Full width of the grid cell */
+    max-width: 220px; /* Maintain proportions */
+    height: auto; /* Let height adjust to content */
+    min-height: 220px; /* Minimum height instead of fixed */
+  }
+  
+  .cardImage {
+    height: 100px; /* Smaller image height on mobile */
   }
   
   .cardTitle {
     font-size: 1rem;
+    margin-bottom: 0.3rem; /* Less margin on mobile */
   }
   
   .cardDescription {
     font-size: 0.75rem;
+    margin-bottom: 0.5rem; /* Less margin on mobile */
+  }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
+  .projectGrid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+  
+  .card, .card2 {
+    max-width: 100%; /* Full width on very small screens */
   }
 }
