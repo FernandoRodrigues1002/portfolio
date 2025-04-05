@@ -1,0 +1,160 @@
+.container {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  color: #ff9001; 
+  text-align: center;
+  margin-top: 40px;
+
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  background-image: linear-gradient(163deg, #ec8800 0%, #ff9001 50%, #a0a0a0 100%);
+  border-radius: 20px;
+  transition: all .3s;
+  margin: 0 auto;
+}
+
+.card2 {
+  width: 300px;
+  height: 300px;
+  background-color: #303030;
+  border-radius: 10px;
+  transition: all .2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.cardDescription {
+  font-size: 0.875rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.cardButton {
+  font-size: 0.875rem;
+  color: #ff6200;
+  text-decoration: none;
+  transition: color 0.3s;
+  align-self: flex-start;
+}
+
+.cardButton:hover {
+  color: white;
+}
+
+.card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(255, 140, 0, 0.4);
+}
+
+.cardImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+/* Animação para cards vindos da esquerda */
+.card-from-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInFromLeft 0.8s forwards;
+  animation-fill-mode: both;
+}
+
+/* Definindo as animações */
+@keyframes slideInFromLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Adicionar delay para cada card */
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .projectGrid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .card, .card2 {
+    width: 160px;
+    height: 220px;
+  }
+  
+  .cardTitle {
+    font-size: 1rem;
+  }
+  
+  .cardDescription {
+    font-size: 0.75rem;
+  }
+}

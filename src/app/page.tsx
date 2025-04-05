@@ -1,34 +1,32 @@
 "use client";
 
-import styles from './styles/Home.module.css';
-import Image from 'next/image';
-import Lottie from "lottie-react";
-import animationData from "../../public/animations/Animation1.json";
+import styles from "./styles/StylePages/Home.module.css";
+import Image from "next/image";
+
 
 export default function Home() {
   return (
+    
     <section className={styles.container}>
-      
-      <div className={styles.imageWrapper}>
+      <div className={`${styles.imageWrapper} ${styles['img-from-left']}`}>
         <Image
-          src="/ft_perfil.jpeg"
+          src="/images/foto_perfil4.png"
           alt="Foto de Fernando Rodrigues"
-          width={250}
-          height={250}
+          width={500}
+          height={500}
           className={styles.image}
         />
       </div>
 
       <div className={styles.textWrapper}>
-      <h1 className={`${styles.description} ${styles.cursor} ${styles['typewriter-animation']}`}>
-        Olá, eu sou o <span className={styles.name}>Fernando Rodrigues</span>
-      </h1>
-      <p className={styles.description}>Estudante de Sistemas para Internet no Senac</p>
-    </div>
-
-      <div className={styles.animationContainer}>
-        <Lottie animationData={animationData} loop={true} />
+        <h1 className={`${styles.title} ${styles.cursor} ${styles["typewriter-animation"]}`}>
+          Olá, sou o <span className={styles.name}>Fernando</span>
+        </h1>
+        <p className={`${styles.description} ${styles.cursor} ${styles["typewriter-animation2"]}`}>
+          Desenvolvedor Full Stack
+        </p>
       </div>
-  </section>
-);
+    </section>
+
+  );
 }

@@ -1,0 +1,109 @@
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between; /* empurra o texto para a esquerda e imagem para a direita */
+  align-items: center;
+  height: 100vh;
+  padding: 20px 60px; /* padding maior nas laterais */
+  gap: 2rem;
+  color: white;
+  padding-top: 80px;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+
+}
+
+.imageWrapper {
+  flex-shrink: 0;
+}
+
+.image {
+  width: 500px; /* Aumenta o tamanho da imagem */
+  height: 500px; /* Mantém a proporção quadrada */
+  float: right;  /* Coloca a imagem no lado direito */
+  margin-left: 20px; /* Espaço entre a imagem e o conteúdo à esquerda */
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 3rem !important;
+}
+
+.name {
+  font-size: 3rem;
+  color: #ff9001;
+}
+
+.description {
+  font-size: 3rem !important;
+  margin-top: 0.5rem;
+}
+
+
+/* Estilo para o texto da animação */
+.cursor {
+  position: relative;
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 30px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+
+.typewriter-animation {
+  animation: 
+    typewriter 3s steps(50) 0.4s 1 normal both, 
+    blinkingCursor 557ms steps(50) 5 normal forwards; /* Cursor pisca 5 vezes e depois some */
+  display: inline-block; /* Garante que o efeito funcione corretamente */
+  white-space: nowrap; /* Evita quebra de linha */
+  overflow: hidden; /* Esconde o texto que ainda não apareceu */
+  border-right: 2px solid rgba(255, 255, 255, 0.75); /* Cursor visível */
+}
+
+.typewriter-animation2 {
+  animation: 
+    typewriter 3s steps(50) 2.9s 1 normal both, /* Começa depois */
+    showCursor 10ms linear 2.9s forwards, /* Faz o cursor aparecer exatamente em 2.9s */
+    blinkingCursor 500ms steps(50) infinite 2.9s; /* Começa a piscar em 2.9s */
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid transparent; /* Começa invisível */
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes showCursor {
+  to { border-right-color: rgba(255, 255, 255, 0.75); }
+}
+
+@keyframes blinkingCursor {
+  0% { border-right-color: rgba(255, 255, 255, 0.75); }
+  100% { border-right-color: transparent; }
+}
+
+/* Animação para elementos vindos da esquerda */
+.img-from-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInFromLeft 1.7s forwards;
+  animation-fill-mode: both;
+}
+
+@keyframes slideInFromLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

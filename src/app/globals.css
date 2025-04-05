@@ -20,9 +20,8 @@
 }
 
 body {
-  background-color: #1c1c1c;
+background-color: #1c1c1c;
   color: var(--foreground);
   font-family: var(--font-montserrat), sans-serif;
-  
   
 }

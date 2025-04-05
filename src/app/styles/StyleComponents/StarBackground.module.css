@@ -1,0 +1,39 @@
+.starsContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(to bottom, #1c1c1c, #1a1a1a, #333333);
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(0);
+}
+
+.star {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: starAnimation linear infinite;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes starAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+}
